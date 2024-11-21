@@ -3,15 +3,13 @@ import requests
 import pandas as pd
 import matplotlib.pyplot as plt  # For dynamic graphs
 
-# NEW: Set page configuration
-st.set_page_config(
+st.set_page_config( # NEW
     page_title="Weather Forecast",
-    page_icon="🌤",
     layout="wide",
 )
 
 # App Title
-st.title("Weather Forecast App 🌤")
+st.title("Weather Forecast App")
 st.write("Get the latest weather forecast for your location.")
 
 # User Inputs
@@ -19,8 +17,7 @@ latitude = st.number_input("Enter Latitude", value=37.7749, format="%.4f")
 longitude = st.number_input("Enter Longitude", value=-122.4194, format="%.4f")
 days = st.slider("Select Forecast Duration (1-7 days)", 1, 7, value=3)  # NEW
 
-if st.button("Get Weather Forecast"):
-    # Fetch Data from Open-Meteo API
+if st.button("Get Weather Forecast"): # NEW:
     url = "https://api.open-meteo.com/v1/forecast"
     params = {
         "latitude": latitude,
