@@ -1,17 +1,15 @@
 import streamlit as st
 import requests
 import pandas as pd
-import matplotlib.pyplot as plt  # For dynamic graphs
+import matplotlib.pyplot as plt
 
 st.set_page_config( # NEW
     page_title="Weather Forecast",
     layout="wide",
 )
 
-# App Title
 st.title("Weather Forecast App")
 
-# User Inputs
 latitude = float(st.number_input("Enter Latitude", value=0.00000000, format="%.4f"))
 longitude = float(st.number_input("Enter Longitude", value=0.00000000, format="%.4f"))
 days = st.slider("Select Forecast Duration (1-7 days)", 1, 7, value=3)  # NEW
