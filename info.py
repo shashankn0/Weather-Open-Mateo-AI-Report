@@ -2,7 +2,7 @@
 #This File will contain the information to be displayed in your portfolio
 
 #CHANGE BELOW
-profile_picture = "images/profile.jpg"
+profile_picture = "images/profile.JPG"
 about_me = "I'm Shashank Nellutla. I am a first year Industrial Engineering student at Georgia Tech. I am also a real esate salesperson. "
 
 
