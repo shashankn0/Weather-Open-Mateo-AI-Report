@@ -12,8 +12,8 @@ st.set_page_config( # NEW
 st.title("Weather Forecast App")
 
 # User Inputs
-latitude = st.number_input("Enter Latitude", value=0, min_value=-90.0, max_value=90.0 format="%.4f")
-longitude = st.number_input("Enter Longitude", value=0, min_value=-180.0, max_value=180.0 format="%.4f")
+latitude = st.number_input("Enter Latitude", value=0, min_value=-90.0, max_value=90.0, format="%.4f")
+longitude = st.number_input("Enter Longitude", value=0, min_value=-180.0, max_value=180.0, format="%.4f")
 days = st.slider("Select Forecast Duration (1-7 days)", 1, 7, value=3)  # NEW
 
 st.button("Get Weather Forecast") # NEW
