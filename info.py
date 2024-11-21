@@ -2,7 +2,7 @@
 #This File will contain the information to be displayed in your portfolio
 
 #CHANGE BELOW
-profile_picture = "Images/profile.jpg"
+profile_picture = "images/profile.jpg"
 about_me = "I'm Shashank Nellutla. I am a first year Industrial Engineering student at Georgia Tech. I am also a real esate salesperson. "
 
 
@@ -30,10 +30,10 @@ course_data = {
     }
 experience_data = {
     "Lifeguard at a Neighborhood Pool": (["- Supervised the pool and surroundings with one other",
-                                                                          "- Safeguarded children from drowning", "- Earned lifeguard of the month"],"Images/lifeguard.jpg"),
+                                                                          "- Safeguarded children from drowning", "- Earned lifeguard of the month"],"images/lifeguard.jpg"),
     "Marketing Intern at a Sports Apparel Store":(["- Made advertisements for the store's social media page",
-                                                           "- Increased customer visits by creating unique apparel"],"Images/marketing.jpg"),
-    "Marketing Lead at Fund-a-Box":(["- Lead a marketingteam of highschoolers for a startup app"],"Images/fundabox.png")
+                                                           "- Increased customer visits by creating unique apparel"],"images/marketing.jpg"),
+    "Marketing Lead at Fund-a-Box":(["- Lead a marketingteam of highschoolers for a startup app"],"images/fundabox.png")
 
 }
 
@@ -65,7 +65,7 @@ spoken_data = {
     "Spanish": "Fluent",
 }
 leadership_data = {
-    "Co-founder/Vice President at AAI Ted-Ed": (["- Co-founder for Ted-Ed club at Alliance Academy for Innovation which hosted public speaking events"],"Images/teded.jpg"),
+    "Co-founder/Vice President at AAI Ted-Ed": (["- Co-founder for Ted-Ed club at Alliance Academy for Innovation which hosted public speaking events"],"images/teded.jpg"),
 
 }
 activity_data={
