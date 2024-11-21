@@ -17,7 +17,8 @@ def linksSection():
     st.sidebar.header("Links")
     
     st.sidebar.text("Connect with me on LinkedIn")
-    linkedin_link=f'<a href="{info.my_linkedin_url}"><img src="{info.linkedin_image_url}" alt="LinkedIn" width = "75" height ="75"></a>'
+    # linkedin_link=f'<a href="{info.my_linkedin_url}"><img src="{info.linkedin_image_url}" alt="LinkedIn" width = "75" height ="75"></a>'
+    linkedin_link=f'<img src="{info.linkedin_image_url}" alt="LinkedIn" width = "75" height ="75">'
     st.sidebar.markdown(linkedin_link,unsafe_allow_html=True)
     
     st.sidebar.text("Email me!")
