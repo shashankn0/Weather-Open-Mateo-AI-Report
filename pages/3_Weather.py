@@ -17,7 +17,7 @@ latitude = st.number_input("Enter Latitude", value=37.7749, format="%.4f")
 longitude = st.number_input("Enter Longitude", value=-122.4194, format="%.4f")
 days = st.slider("Select Forecast Duration (1-7 days)", 1, 7, value=3)  # NEW
 
-if st.button("Get Weather Forecast"): # NEW:
+st.button("Get Weather Forecast"): # NEW
     url = "https://api.open-meteo.com/v1/forecast"
     params = {
         "latitude": latitude,
@@ -31,7 +31,6 @@ if st.button("Get Weather Forecast"): # NEW:
     if response.status_code == 200:
         data = response.json()
 
-        # Data Processing
         time = data["daily"]["time"]
         temp_max = data["daily"]["temperature_2m_max"]
         temp_min = data["daily"]["temperature_2m_min"]
@@ -42,7 +41,6 @@ if st.button("Get Weather Forecast"): # NEW:
             "Min Temperature (°C)": temp_min,
         })
 
-        # NEW: Dynamic Graph
         st.subheader("Temperature Forecast")
         fig, ax = plt.subplots()
         ax.plot(time, temp_max, label="Max Temperature", color="red")
@@ -51,12 +49,8 @@ if st.button("Get Weather Forecast"): # NEW:
         ax.set_ylabel("Temperature (°C)")
         ax.set_title("Daily Temperature Forecast")
         ax.legend()
-        st.pyplot(fig)
+        st.pyplot(fig) # NEW
 
-        # NEW: Display Data as Table
         st.subheader("Forecast Data")
-        st.dataframe(forecast)
-
-    else:
-        st.error("Failed to fetch data. Please try again.")
+        st.dataframe(forecast) # NEW
 
