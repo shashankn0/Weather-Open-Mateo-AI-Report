@@ -10,7 +10,6 @@ st.set_page_config( # NEW
 
 # App Title
 st.title("Weather Forecast App")
-st.write("Get the latest weather forecast for your location.")
 
 # User Inputs
 latitude = st.number_input("Enter Latitude", value=0, min_value=-90.0, max_value=90.0 format="%.4f")
