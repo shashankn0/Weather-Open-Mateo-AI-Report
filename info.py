@@ -7,7 +7,7 @@ about_me = "I'm Shashank Nellutla. I am a first year Industrial Engineering stud
 
 
 #CHANGE BELOW (OPTIONAL)
-linkedin_image_url = "https://content.linkedin.com/content/dam/me/business/en-us/amp/brand-site/v2/bg/LI-Bug.svg.original.svg"
+linkedin_image_url = "images/linkedin.jpg"
 email_image_url = "https://logowik.com/content/uploads/images/513_email.jpg"
 
 #CHANGE BELOW
