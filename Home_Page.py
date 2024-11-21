@@ -21,7 +21,7 @@ st.subheader("Shashank Nellutla, Anna Reed Draper")
 st.write("""
 Welcome to our Streamlit Web Development Lab03 app! You can navigate between the pages using the sidebar to the left. The following pages are:
 
-1.
+1. pages/info.py
 2.
 3.
 4.
