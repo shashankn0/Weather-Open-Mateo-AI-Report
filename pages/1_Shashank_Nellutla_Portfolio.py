@@ -24,6 +24,10 @@ def linksSection():
     email_html=f'<a href="mailto:{info.my_email_address}"><img src="{info.email_image_url}" alt="Email" width = "75" height ="75"></a>'
     st.sidebar.markdown(email_html,unsafe_allow_html=True)
 
+    st.sidebar.text("Check out my Instagram Page!")
+    instagram_link=f'<a href="{info.my_instagram_url}"><img src="{info.instagram_image_url}" alt="Instagram" width = "75" height ="75"></a>'
+    st.sidebar.markdown(instagram_link,unsafe_allow_html=True)
+
 linksSection()
 
 
