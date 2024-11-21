@@ -3,10 +3,7 @@ import requests
 import pandas as pd
 import matplotlib.pyplot as plt
 
-st.set_page_config( # NEW
-    page_title="Weather Forecast",
-    layout="wide",
-)
+st.set_page_config(page_title="Weather Forecast",) #NEW
 
 st.title("Weather Forecast App")
 
