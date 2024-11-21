@@ -33,7 +33,7 @@ experience_data = {
                                                                           "- Safeguarded children from drowning", "- Earned lifeguard of the month"],"images/lifeguard.jpg"),
     "Marketing Intern at a Sports Apparel Store":(["- Made advertisements for the store's social media page",
                                                            "- Increased customer visits by creating unique apparel"],"images/marketing.jpg"),
-    "Marketing Lead at Fund-a-Box":(["- Lead a marketingteam of highschoolers for a startup app"],"images/marketing.jpg")
+    "Marketing Lead at Fund-a-Box":(["- Lead a marketingteam of highschoolers for a startup app"],"images/fundabox.jpg")
 
 }
 
