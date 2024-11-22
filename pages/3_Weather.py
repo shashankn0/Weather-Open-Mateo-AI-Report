@@ -9,7 +9,7 @@ latitude = float(st.number_input("Enter Latitude", value=0.00000000, format="%.4
 longitude = float(st.number_input("Enter Longitude", value=0.00000000, format="%.4f"))
 days = st.slider("Select Forecast Duration (1-7 days)", 1, 7, value=3)  # NEW
 
-st.button(f"Get Weather Forecast for {days}") # NEW
+st.button(f"Get Weather Forecast For {days} Days") # NEW
 url = "https://api.open-meteo.com/v1/forecast"
 params = {
     "latitude": latitude,
