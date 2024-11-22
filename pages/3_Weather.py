@@ -3,8 +3,6 @@ import requests
 import pandas as pd
 import matplotlib.pyplot as plt
 
-st.set_page_config(page_title="Weather Forecast",) #NEW
-
 st.title("Weather Forecast App")
 
 latitude = float(st.number_input("Enter Latitude", value=0.00000000, format="%.4f"))
