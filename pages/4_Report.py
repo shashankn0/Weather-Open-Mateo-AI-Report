@@ -76,7 +76,7 @@ if cityFound==True:
      st.write("Ask about what your should wear or whether the outfit you have planned will fit with today's conditions!")
      if "conversation_history" not in st.session_state:
               st.session_state.conversation_history = []
-    if "input_text" not in st.session_state:
+     if "input_text" not in st.session_state:
               st.session_state.input_text = ""
             
     def submit():
@@ -86,7 +86,7 @@ if cityFound==True:
               st.session_state.input_text = ''
             
     output_container = st.container()
-     with output_container:
+    with output_container:
          for message in st.session_state.conversation_history:
              st.write(message)
 
@@ -101,7 +101,7 @@ if cityFound==True:
         model = genai.GenerativeModel("gemini-1.5-flash")
         response2 = model.generate_content(f"Answer the following question so the asker can figure out what to wear today, {question}, given the weather conditions of today: maximum temperature={temp_max}, minimum temperature={temp_min}, and chance of rain={precip_prob}")
         st.session_state.conversation_history.append(f"You: {question}")
-         st.session_state.conversation_history.append(f"Weather man: {response2.text}")
+        st.session_state.conversation_history.append(f"Weather man: {response2.text}")
 
 
             
