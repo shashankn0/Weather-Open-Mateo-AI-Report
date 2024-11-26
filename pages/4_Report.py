@@ -87,7 +87,6 @@ if cityFound==True:
               st.session_state.conversation_history.append(f"Weather man: {response2.text}")
               st.session_state.input_text = ''
 
-     question = st.text_input(" ", key="input_text", on_change=submit, placeholder="Your question...")
     
      output_container = st.container()
      with output_container:
@@ -98,6 +97,7 @@ if cityFound==True:
      st.write("")
    
      input_container = st.container()
+     question = st.text_input(" ", key="input_text", on_change=submit, placeholder="Your question...")
     
         
          
