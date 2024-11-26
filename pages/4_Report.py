@@ -2,7 +2,7 @@ import streamlit as st
 import requests
 import google.generativeai as genai
 import os
-cityFound == False
+cityFound = False
 st.title("Today's Weather in your City")
 
     
