@@ -73,13 +73,14 @@ if cityFound==True:
             st.subheader("What should you wear today??")
             st.write("Ask about what your should wear or whether the outfit you have planned will fit with today's conditions!")
             st.session_state.conversation_history = []
-            question = st.text_input("Your question...")
-            submit_button = st.form_submit_button(label='Submit', on_click=form_callback)
-            if question:
-                model = genai.GenerativeModel("gemini-1.5-flash")
-                response = model.generate_content(f"Answer the following question so the asker can figure out what to wear today, {question}, given the weather conditions of today: maximum temperature={temp_max}, minimum temperature={temp_min}, and chance of rain={precip_prob}")
-                st.session_state.conversation_history.append(f"You: {question}")
-                st.session_state.conversation_history.append(f"Weather man: {response.text}")
+            question = st.text_input()
+            st.text_input.placeholder("Your question...")
+            if st.button("Submit"):
+                if question:
+                    model = genai.GenerativeModel("gemini-1.5-flash")
+                    response = model.generate_content(f"Answer the following question so the asker can figure out what to wear today, {question}, given the weather conditions of today: maximum temperature={temp_max}, minimum temperature={temp_min}, and chance of rain={precip_prob}")
+                    st.session_state.conversation_history.append(f"You: {question}")
+                    st.session_state.conversation_history.append(f"Weather man: {response.text}")
             for input in st.session_state.conversation_history:
                 st.write(input)
     chatbot()
