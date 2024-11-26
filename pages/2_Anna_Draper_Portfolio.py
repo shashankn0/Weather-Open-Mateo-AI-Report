@@ -61,7 +61,7 @@ experience_section(info2.experience_data)
 # Projects
 def project_section(projects_data):
     st.header("Projects")
-    for project_name, project_description in projects_data.items():
+    for project_name, (project_description,image) in projects_data.items():
         expander=st.expander(f"{project_name}")
         expander.write(project_description)
         expander.image(image,width=250)
