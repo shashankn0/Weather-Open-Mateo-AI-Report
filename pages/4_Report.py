@@ -60,9 +60,27 @@ try:
         response = model.generate_content(f"Generate a weather report for the date,{time}, with a maximum temperature of {temp_max} and a minimum temperature of {temp_min} and a {precip_prob} chance of rain.")
 
         st.write(response.text)
+        cityFound = True
 
 
 except:
     st.subheader("Your city cannot be found.")
+    cityFound = False
+
+def chatbot():
+    if cityFound == True:
+        st.subheader("What should you wear today??")
+        st.write("Ask about what your should wear or whether the outfit you have planned will fit with today's conditions!")
+        st.session_state.conversation_history = []
+        question = st.text_input("Your question...")
+        if question:
+            model = genai.GenerativeModel("gemini-1.5-flash")
+            response = model.generate_content(f"Answer the following question so the asker can figure out what to wear today, {question}, given the weather conditions of today: maximum temperature={temp_max}, minimum temperature={temp_min}, and chance of rain={precip_prob}")
+            st.session_state.conversation_history.append(f"You: {question}")
+            st.session_state.conversation_history.append(f"Weather man: {response}")
+        for input in st.session_state.conversation_history:
+            st.write(input)
+chatbot()
+            
 
 
