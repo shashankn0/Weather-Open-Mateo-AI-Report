@@ -75,6 +75,7 @@ if cityFound==True:
             st.session_state.conversation_history = []
             question = st.text_input(" ", placeholder="Your question...")
             if st.button("Submit"):
+                st.session_state.input_text = ""
                 if question:
                     model = genai.GenerativeModel("gemini-1.5-flash")
                     response = model.generate_content(f"Answer the following question so the asker can figure out what to wear today, {question}, given the weather conditions of today: maximum temperature={temp_max}, minimum temperature={temp_min}, and chance of rain={precip_prob}")
