@@ -1,4 +1,4 @@
-import streamlit as st
+simport streamlit as st
 import requests
 import google.generativeai as genai
 import os
@@ -82,8 +82,8 @@ if cityFound==True:
      def submit():
          if st.session_state.input_text:
               model = genai.GenerativeModel("gemini-1.5-flash")
-              response2 = model.generate_content(f"Answer the following question so the asker can figure out what to wear today, {input_text}, given the weather conditions of today: maximum temperature={temp_max}, minimum temperature={temp_min}, and chance of rain={precip_prob}")
-              st.session_state.conversation_history.append(f"You: {input_text}")
+              response2 = model.generate_content(f"Answer the following question so the asker can figure out what to wear today, {st.session_state.input_text}, given the weather conditions of today: maximum temperature={temp_max}, minimum temperature={temp_min}, and chance of rain={precip_prob}")
+              st.session_state.conversation_history.append(f"You: {st.session_state.input_text}")
               st.session_state.conversation_history.append(f"Weather man: {response2.text}")
               st.session_state.input_text = ''
 
