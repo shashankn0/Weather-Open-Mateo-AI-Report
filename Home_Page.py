@@ -25,7 +25,7 @@ Welcome to our Streamlit Web Development Lab03 app! You can navigate between the
 1. **Shashank Nellutla Portfolio**: Learn more about Shashank and his talents and accomplishments!
 2. **Anna Draper Portfolio**: Learn more about Anna and her talents and accomplishments!
 3. **Weather**: Receive a weather forecast for whatever coordinates you input!
-4. **Report**: Receive a weather report for today in whatever city you are in and also figure out what to wear!
+4. **Report**: Receive a weather report for today in whatever city you input and also figure out what to wear!
 
 """)
 
