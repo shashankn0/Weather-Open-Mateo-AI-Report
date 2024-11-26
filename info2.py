@@ -8,7 +8,7 @@ about_me = "I'm Anna Draper. I am a first year Industrial Engineering student at
 #CHANGE BELOW (OPTIONAL)
 github_image_url = "https://cdn-icons-png.flaticon.com/256/25/25231.png"
 email_image_url = "https://logowik.com/content/uploads/images/513_email.jpg"
-instagram_image_url = "https://logowik.com/instagram-icon-vector-logo-4281.html"
+instagram_image_url = "images/instagram.jpg"
 
 #CHANGE BELOW
 my_instagram_url = "https://www.instagram.com/_annadraperr"
