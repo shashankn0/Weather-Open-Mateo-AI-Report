@@ -76,7 +76,7 @@ def skills_section(programming_data, spoken_data):
     for skill,percentage in programming_data.items():
         st.write(f"{skill}{info2.programming_icons.get(skill,'')}")
         st.progress(percentage)
-    st.subheaders("Spoken Languages")
+    st.subheader("Spoken Languages")
     for spoken,proficiency in spoken_data.items():
         st.write(f"{spoken}{info2.spoken_icons.get(spoken,'')}: {proficiency}")
     st.write("---")
