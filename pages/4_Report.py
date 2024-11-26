@@ -66,7 +66,7 @@ try:
 except:
     st.subheader("Your city cannot be found.")
     cityFound = False
-if response.status_code == 200:
+if cityFound:
     def chatbot():
         if cityFound == True:
             st.subheader("What should you wear today??")
