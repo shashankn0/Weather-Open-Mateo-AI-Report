@@ -98,8 +98,7 @@ if cityFound==True:
      st.write("")
    
      input_container = st.container()
-     with input_container:
-         st.write(message)
+    
         
          
 
