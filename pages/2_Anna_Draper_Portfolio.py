@@ -15,7 +15,7 @@ about_me_section()
 def links_section():
     st.sidebar.header("Links")
     st.sidebar.text("Connect with me on Instagram")
-    linkedin_link = f'<a href="{info2.my_insta_url}"><img src = "{info2.insta_image_url}" alt = "LockDownBrowser-2-1-2-09-912935199inkedIn" width = "75" height = "75"></a>'
+    linkedin_link = f'<a href="{info2.my_instagram_url}"><img src = "{info2.instagram_image_url}" alt = "LockDownBrowser-2-1-2-09-912935199inkedIn" width = "75" height = "75"></a>'
     st.sidebar.markdown(linkedin_link, unsafe_allow_html=True)
     st.sidebar.text("Checkout my work")
     github_link = f'<a href="{info2.my_github_url}"><img src="{info2.github_image_url}" alt = "Github" width="65" height+"65"></a>'
