@@ -87,7 +87,7 @@ skills_section(info2.programming_data, info2.spoken_data)
 # Activities
 def activities_section(leadership_data,activity_data):
     st.header("Activities")
-    tab1,tab2 = st.tabs(["Leadership", "Community Service"])
+    tab1,tab2 = st.tabs(["Leadership", "Sports"])
     with tab1:
         st.subheader("Leadership")
         for title,(details,image) in leadership_data.items():
