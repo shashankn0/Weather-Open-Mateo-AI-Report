@@ -9,6 +9,7 @@ st.title("Web Development Lab03")
 st.header("CS 1301")
 st.subheader("Team 96, Web Development - Section B")
 st.subheader("Shashank Nellutla, Anna Draper")
+st.write("---")
 
 
 # Introduction
@@ -21,10 +22,10 @@ st.subheader("Shashank Nellutla, Anna Draper")
 st.write("""
 Welcome to our Streamlit Web Development Lab03 app! You can navigate between the pages using the sidebar to the left. The following pages are:
 
-1. pages/info.py
-2.
-3.
-4.
+1. **Shashank Nellutla Portfolio**: Learn more about Shashank and his talents and accomplishments!
+2. **Anna Draper Portfolio**: Learn more about Anna and her talents and accomplishments!
+3. **Weather**: Receive a weather forecast for whatever coordinates you input!
+4. **Report**: Receive a weather report for today in whatever city you are in and also figure out what to wear!
 
 """)
 
