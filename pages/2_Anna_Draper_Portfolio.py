@@ -64,6 +64,7 @@ def project_section(projects_data):
     for project_name, project_description in projects_data.items():
         expander=st.expander(f"{project_name}")
         expander.write(project_description)
+        expander.image(image,width=250)
     st.write("---")
     project_section(info.projects_data)
 project_section(info.projects_data)
