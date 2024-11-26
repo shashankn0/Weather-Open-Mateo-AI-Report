@@ -1,7 +1,7 @@
 #This File will contain the information to be displayed in your portfolio
 
 #CHANGE BELOW
-profile_picture = "images/profile.JPG"
+profile_picture = "images/profile2.jpg"
 about_me = "I'm Anna Draper. I am a first year Industrial Engineering student at Georgia Tech. "
 
 
@@ -31,16 +31,16 @@ course_data = {
     }
 experience_data = {
     "Worked at Roswell Gymnastics": (["- Taught kids how to do cartwheels",
-                                                                          "- Rescued many kids from the foam pit"],"images/lifeguard.jpg"),
+                                                                          "- Rescued many kids from the foam pit"],"images/gymnasticscoach.jpg"),
     "Tropical Smoothie worker":(["- Made a lot of smoothies",
-                                                           "- Drank a lot of smoothies"],"images/marketing.jpg"),
+                                                           "- Drank a lot of smoothies"],"images/smoothie.jpg"),
     "Hydralive IV Therapy Front Desk Manager":(["- Checked in customers and took their vitals"
-                                               "- Very boring"],"images/Fundabox.jpg")
+                                               "- Very boring"],"images/hydralive.jpg")
 
 }
 
 projects_data = {
-    "Crochet Master": ["Crocheted animals for all my friends before they left for college", image]
+    "Crochet Master": ["Crocheted animals for all my friends before they left for college", "images/crochet.jpg"]
 }
 
 programming_data = {
@@ -66,7 +66,7 @@ spoken_data = {
     "Spanish": "I can probably say like 3 phrases",
 }
 leadership_data = {
-    "Gymnastics Team Captain": (["- Junior and Senior year captain of my gymnastics team"],"images/teded.jpg"),
+    "Gymnastics Team Captain": (["- Junior and Senior year captain of my gymnastics team"],"images/team.jpg"),
 
 }
 activity_data={
