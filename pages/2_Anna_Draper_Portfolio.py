@@ -15,13 +15,13 @@ about_me_section()
 def links_section():
     st.sidebar.header("Links")
     st.sidebar.text("Connect with me on Instagram")
-    linkedin_link = f'<a href="{info2.my_instagram_url}"><img src = "{info2.instagram_image_url}" alt = "LockDownBrowser-2-1-2-09-912935199inkedIn" width = "75" height = "75"></a>'
+    linkedin_link = f'<a href="{info2.my_instagram_url}"><img src="{info2.instagram_image_url}" alt = "LinkedIn" width = "75" height = "75"></a>'
     st.sidebar.markdown(linkedin_link, unsafe_allow_html=True)
     st.sidebar.text("Checkout my work")
-    github_link = f'<a href="{info2.my_github_url}"><img src="{info2.github_image_url}" alt = "Github" width="65" height+"65"></a>'
+    github_link = f'<a href="{info2.my_github_url}"><img src="{info2.github_image_url}" alt = "Github" width="65" height="65"></a>'
     st.sidebar.markdown(github_link, unsafe_allow_html=True)
     st.sidebar.text("Or email me!")
-    email_html = f'<a href = "mailto:{info2.my_email_address}"><img src="{info2.email_image_url}" alt = "Email" width="75" height="75"></a>'
+    email_html = f'<a href ="mailto:{info2.my_email_address}"><img src="{info2.email_image_url}" alt = "Email" width="75" height="75"></a>'
     st.sidebar.markdown(email_html, unsafe_allow_html=True)
 links_section()
 
@@ -30,9 +30,9 @@ links_section()
 def education_section(education_data, course_data):
     st.header("Education")
     st.subheader(f"**{education_data['Institution']}**")
-    st.write(f"**Degree:**{education_data['Degree']}")
-    st.write(f"**Graduation Date:**{education_data['Graduation Date']}")
-    st.write(f"**GPA:**{education_data['GPA']}")
+    st.write(f"**Degree:** {education_data['Degree']}")
+    st.write(f"**Graduation Date:** {education_data['Graduation Date']}")
+    st.write(f"**GPA:** {education_data['GPA']}")
     st.write("**Relevant Coursework:**")
     coursework = pd.DataFrame(course_data)
     st.dataframe(coursework, column_config={
@@ -66,7 +66,6 @@ def project_section(projects_data):
         expander.write(project_description)
         expander.image(image,width=250)
     st.write("---")
-    project_section(info2.projects_data)
 project_section(info2.projects_data)
 
 
