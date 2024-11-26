@@ -79,8 +79,8 @@ if cityFound==True:
      if "input_text" not in st.session_state:
               st.session_state.input_text = ""
             
-    def submit():
-          if st.session_state.input_text:
+     def submit():
+         if st.session_state.input_text:
               st.session_state.conversation_history.append(f"You: {question}")
               st.session_state.conversation_history.append(f"Weather man: {response2.text}")
               st.session_state.input_text = ''
