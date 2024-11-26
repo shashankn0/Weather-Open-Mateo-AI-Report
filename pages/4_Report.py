@@ -17,6 +17,9 @@ if ' ' in city:
         fCity += item + "+"
     city = fCity[:-1]
     
+st.write("")
+st.write("")
+
 try:
     api_url = 'https://api.api-ninjas.com/v1/geocoding?city={}&state={}'.format(city,state)
     response = requests.get(api_url + city + state, headers = {'X-Api-Key': 'EQ41HwpJwt7hYy2gHk7SfQ==vOltY334CaIzpR6u'})
@@ -67,36 +70,38 @@ except:
     st.subheader("Your city cannot be found.")
     cityFound = False
 
-if cityFound==True:
-    st.subheader("What should you wear today??")
-    st.write("Ask about what your should wear or whether the outfit you have planned will fit with today's conditions!")
-    if "conversation_history" not in st.session_state:
-            st.session_state.conversation_history = []
-    if "input_text" not in st.session_state:
-            st.session_state.input_text = ""
-    def submit():
-        if st.session_state.input_text:
+def chatbox():
+    
+    if cityFound==True:
+        st.subheader("What should you wear today??")
+        st.write("Ask about what your should wear or whether the outfit you have planned will fit with today's conditions!")
+        if "conversation_history" not in st.session_state:
+                st.session_state.conversation_history = []
+        if "input_text" not in st.session_state:
+                st.session_state.input_text = ""
+        def submit():
+            if st.session_state.input_text:
+                st.session_state.conversation_history.append(f"You: {question}")
+                st.session_state.conversation_history.append(f"Weather man: {response.text}")
+                st.session_state.input_text = ''
+            
+        output_container = st.container()
+        with output_container:
+            for message in st.session_state.conversation_history:
+                st.write(message)
+
+        st.write("")
+        st.write("")
+   
+        input_container = st.container()
+        with input_container:
+            question = st.text_input(" ", key="input_text", on_change=submit, placeholder="Your question...")
+        
+        if question:
+            model = genai.GenerativeModel("gemini-1.5-flash")
+            response = model.generate_content(f"Answer the following question so the asker can figure out what to wear today, {question}, given the weather conditions of today: maximum temperature={temp_max}, minimum temperature={temp_min}, and chance of rain={precip_prob}")
             st.session_state.conversation_history.append(f"You: {question}")
             st.session_state.conversation_history.append(f"Weather man: {response.text}")
-            st.session_state.input_text = ''
-            
-    output_container = st.container()
-    with output_container:
-        for message in st.session_state.conversation_history:
-            st.write(message)
-
-    st.write("---")
-    st.write("---")
-    st.write("---")
-    input_container = st.container()
-    with input_container:
-        question = st.text_input(" ", key="input_text", on_change=submit, placeholder="Your question...")
-        
-    if question:
-        model = genai.GenerativeModel("gemini-1.5-flash")
-        response = model.generate_content(f"Answer the following question so the asker can figure out what to wear today, {question}, given the weather conditions of today: maximum temperature={temp_max}, minimum temperature={temp_min}, and chance of rain={precip_prob}")
-        st.session_state.conversation_history.append(f"You: {question}")
-        st.session_state.conversation_history.append(f"Weather man: {response.text}")
 
 
 
