@@ -4,6 +4,7 @@ import google.generativeai as genai
 import os
 cityFound = False
 st.title("Today's Weather in your City")
+st.write("")
 
     
 state = st.selectbox("State",['Alabama', 'Alaska', 'Arizona','Arkansas','California','Colorado','Connecticut','Delaware','Florida','Georgia','Hawaii','Idaho','Illinois','Indiana','Iowa','Kansas','Kentucky','Louisiana','Maine','Maryland','Massachusetts','Michigan','Minnesota','Mississippi','Missouri','Montanta','Nebraska','Nevada','New Hampshire','New Jersey','New Mexico','New York','North Carolina','North Dakota','Ohio','Oklahoma','Oregon','Pennsylvania','Rhode Island','South Carolina','South Dakota','Tennessee','Texas','Utah','Vermont','Virginia','Washington','West Virginia','Wisconsin','Wyoming'], placeholder = "State")
@@ -56,7 +57,7 @@ try:
 
 
         genai.configure(api_key = 'AIzaSyAC-2udy2vUhyuee4Dw4fk8BCNBfMxm_gI')
-
+        st.write("--")
         st.subheader(f"Today's Report in {oldCity}, {state}:")
     
         model = genai.GenerativeModel("gemini-1.5-flash")
@@ -70,7 +71,8 @@ except:
     st.subheader("Your city cannot be found.")
     cityFound = False
 
-    
+st.write('---')
+
 if cityFound==True:
      st.subheader("What should you wear today??")
      st.write("Ask about what your should wear or whether the outfit you have planned will fit with today's conditions!")
