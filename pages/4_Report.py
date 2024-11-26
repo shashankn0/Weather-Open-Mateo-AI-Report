@@ -82,8 +82,8 @@ if cityFound==True:
      def submit():
          if st.session_state.input_text:
               model = genai.GenerativeModel("gemini-1.5-flash")
-              response2 = model.generate_content(f"Answer the following question so the asker can figure out what to wear today, {question}, given the weather conditions of today: maximum temperature={temp_max}, minimum temperature={temp_min}, and chance of rain={precip_prob}")
-              st.session_state.conversation_history.append(f"You: {question}")
+              response2 = model.generate_content(f"Answer the following question so the asker can figure out what to wear today, {input_text}, given the weather conditions of today: maximum temperature={temp_max}, minimum temperature={temp_min}, and chance of rain={precip_prob}")
+              st.session_state.conversation_history.append(f"You: {input_text}")
               st.session_state.conversation_history.append(f"Weather man: {response2.text}")
               st.session_state.input_text = ''
 
@@ -97,7 +97,7 @@ if cityFound==True:
      st.write("")
    
      input_container = st.container()
-     question = st.text_input(" ", key="input_text", on_change=submit, placeholder="Your question...")
+     st.text_input(" ", key="input_text", on_change=submit, placeholder="Your question...")
     
         
          
