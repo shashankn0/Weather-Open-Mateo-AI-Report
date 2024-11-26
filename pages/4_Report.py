@@ -104,7 +104,7 @@ def chatbox():
             st.session_state.conversation_history.append(f"Weather man: {response.text}")
 
 
-
+chatbox()
             
 
 
