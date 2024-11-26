@@ -69,6 +69,8 @@ except:
     
 if cityFound==True:
     def chatbot():
+        if "input_text" not in st.session_state:
+            st.session_state.input_text = ""
         if cityFound == True:
             st.subheader("What should you wear today??")
             st.write("Ask about what your should wear or whether the outfit you have planned will fit with today's conditions!")
