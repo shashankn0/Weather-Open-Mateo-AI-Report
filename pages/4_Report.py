@@ -2,7 +2,7 @@ import streamlit as st
 import requests
 import google.generativeai as genai
 import os
-
+cityFound == False:
 st.title("Today's Weather in your City")
 
     
@@ -66,7 +66,7 @@ try:
 except:
     st.subheader("Your city cannot be found.")
     cityFound = False
-if cityFound:
+if cityFound==True:
     def chatbot():
         if cityFound == True:
             st.subheader("What should you wear today??")
