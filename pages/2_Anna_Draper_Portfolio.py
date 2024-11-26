@@ -3,7 +3,7 @@ import info2
 import pandas as pd
 
 # About Me
-def about_me_sector():
+def about_me_section():
     st.header("About Me")
     st.image(info2.profile_picture, width = 200)
     st.write(info2.about_me)
