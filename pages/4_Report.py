@@ -73,8 +73,7 @@ if cityFound==True:
             st.subheader("What should you wear today??")
             st.write("Ask about what your should wear or whether the outfit you have planned will fit with today's conditions!")
             st.session_state.conversation_history = []
-            question = st.text_input(" ")
-            st.text_input.placeholder("Your question...")
+            question = st.text_input(" ", placeholder="Your question...")
             if st.button("Submit"):
                 if question:
                     model = genai.GenerativeModel("gemini-1.5-flash")
